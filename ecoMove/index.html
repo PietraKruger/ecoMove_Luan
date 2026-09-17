@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecomove</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- aside -->
+      <aside class="sidebar">
+        <div class="profile-card">
+          <img id="company-logo" class="avatar" src="#" alt="Logo EcoMove" />
+          <h1>Ecomove</h1>
+        </div>
+        <div class="stats">
+          <div>
+            <strong id="total-activities">0</strong>
+            <span>Qtd. Atividades</span>
+          </div>
+          <div>
+            <strong id="total-co2">0</strong>
+            <span>Qtd. co2 (kg)</span>
+          </div>
+        </div>
+
+        <button id="activity-tab" class="activity-tab" disabled>
+          Atividade
+        </button>
+
+        <footer class="sidebar-footer">
+          <h2>Ecomove</h2>
+          <div class="sociais">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">TikTok</a>
+          </div>
+          <span>Copyright-2024</span>
+        </footer>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <button id="auth-btn" class="btn-dark">Login</button>
+        </header>
+        <nav class="filters" id="filters">
+          <button data-type="bicicleta">Bicicleta</button>
+          <button data-type="caminhada">Caminhada</button>
+          <button data-type="transporte_publico">Transporte público</button>
+        </nav>
+        <section id="activity-form-section" class="activity-form hidden">
+          <h2>Crie sua atividade</h2>
+
+          <div class="form-grid">
+            <div>
+              <label for="activity-type">Tipo da atividade</label>
+              <select id="activity-type">
+                <option value="selecione">Selecione</option>
+                <option value="bicicleta">Bicicleta</option>
+                <option value="caminhada">Caminhada</option>
+                <option value="transporte_publico">Transporte público</option>
+              </select>
+              <small class="error" id="error-type"></small>
+            </div>
+            <div>
+              <label for="activity-distance">Distância (m)</label>
+              <input
+                id="activity-distance"
+                type="text"
+                placeholder="Ex: 1000"
+              />
+              <small class="error" id="error-distance"></small>
+            </div>
+            <div>
+              <label for="activity-duration">Duração</label>
+              <input id="activity-duration" type="text" placeholder="Ex: 30" />
+              <small class="error" id="error-duration"></small>
+            </div>
+          </div>
+
+          <button class="btn-dark" id="create-activity">Criar Atividade</button>
+        </section>
+      </main>
+      <!-- main -->
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
